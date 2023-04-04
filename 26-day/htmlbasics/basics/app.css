@@ -1,0 +1,19 @@
+.bkfr{
+    background-color: black;
+    color: white;
+}
+h2{
+    /*selecting by tag name */
+    background-color: red;
+    color: white;
+}
+.someName{
+    /*selecting by some name*/
+    background-color: gold;
+    color: whitesmoke;
+}
+#appH1{
+    /*selecting by id */
+    background-color:brown;
+    color: greenyellow;
+}
