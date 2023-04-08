@@ -3,6 +3,7 @@ package com.axis.main;
 import com.axis.firstassignment.FizzBuzz;
 import com.axis.firstassignment.ReverseString;
 import com.axis.firstassignment.StringPallindrome;
+import com.axis.mockassignment.AscendingDescending;
 import com.axis.mockassignment.FindDerivativeofCos;
 import com.axis.mockassignment.GetSet;
 import com.axis.mockassignment.RemoveDuplicatesFromArr;
@@ -46,9 +47,14 @@ public class Main {
         rdup.removeduplicates();
     }
 
-    public static void findderivatives() {
+    public static void derivatives() {
         FindDerivativeofCos fd = new FindDerivativeofCos();
         fd.findderivatives();
+    }
+
+    public static void sortingEle() {
+        AscendingDescending ade = new AscendingDescending();
+        ade.arrangeEleinAscendingDecendingOrder();
     }
 
     public static void main(String[] args) {
@@ -57,6 +63,7 @@ public class Main {
         // getterSetter();
         // sqrNum();
         // removedup();
-        findderivatives();
+        // derivatives();
+        sortingEle();
     }
 }
