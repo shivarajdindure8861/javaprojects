@@ -1,6 +1,6 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-            xmlns:tns="http://soap.shivu.com/gen"
-            targetNamespace="http://soap.shivu.com/gen" 
+            xmlns:tns="http://soapservice.shivu.com/gen"
+            targetNamespace="http://soapservice.shivu.com/gen" 
             elementFormDefault="qualified">
 
     <xs:element name="getCountryRequest">
