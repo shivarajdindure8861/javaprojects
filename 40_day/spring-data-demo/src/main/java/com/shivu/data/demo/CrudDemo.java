@@ -16,6 +16,7 @@ public class CrudDemo {
     private final InvoiceRepository repository;
 
     private void demo1() {
+
         Invoice invoice1 = new Invoice();
         invoice1.setId(2L);
         invoice1.setClient("pqr");
@@ -23,7 +24,7 @@ public class CrudDemo {
         invoice1.setInvDt(LocalDate.now());
 
         System.out.println("🟢 Creating New Invoice 🟢");
-        Invoice saved = repository.save(invoice1) // 👈 Create
+        Invoice saved = repository.save(invoice1); // 👈 Create
         System.out.println(saved);
         System.out.println("🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉");
 
