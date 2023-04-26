@@ -1,13 +1,29 @@
-const http=require('node:http')
+const http = require('node:http')
 
-const server=http.createServer((req,res) =>{
-    const{url,method} =req
-    if(method==='GET' && url==='/'){
+const loggware = (req, res) => {
+    console.log(`⚠️ Received ${req.method} request for ${req.url}`);
+}
+
+const globalErrorHandler = (req, res) => {
+    console.log(`❌ This is Global Error handler`);
+}
+
+const server = http.createServer((req, res) => {
+
+    // below are called middleware
+    req.on('end', () =>  loggware(req, res))
+    req.on('error', () =>  globalErrorHandler(req,res))
+
+    // const url = req.url
+    // const method = req.method
+
+    const { url, method } = req
+
+    if(method === 'GET' && url === '/') {
         // Handle GET request for root path
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ message: 'GET request received for root path' }));
-    }
-    else if(method === 'POST' && url === '/') {
+    } else if(method === 'POST' && url === '/') {
         // Handle POST request for root path
 
         let reqData = '';
