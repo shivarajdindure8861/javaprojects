@@ -1,0 +1,19 @@
+{
+  "name": "unit-testing-chai",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
