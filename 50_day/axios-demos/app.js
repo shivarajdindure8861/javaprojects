@@ -31,5 +31,5 @@ const updatedData = {
     job: 'sss'
 }
 axios.put('https://reqres.in/api/users/2', updatedData)
-    .then( res => console.log(res.data) )
+    .then( res => console.log(res.data))
     .catch(err => console.log(err))
